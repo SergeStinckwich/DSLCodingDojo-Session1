@@ -25,7 +25,9 @@ public final void testTruth() {
     {
 	Computer c = ComputerBuilder.scriptComputerWithoutDevices();
        	Assert.assertEquals(c.getDisks(), null);
-       	//Assert.assertEquals(c.getProcessor(), null);
+       	Assert.assertEquals(c.getProcessor(), null);
     }
-
+    //@Test
+//public final void testComputerWithSeulDisk()
+    
 }
