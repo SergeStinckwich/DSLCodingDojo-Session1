@@ -42,5 +42,13 @@ public final void testTruth() {
         Assert.assertEquals(c.getProcessor().getCores(), 2);
 	Assert.assertEquals(c.getProcessor().getType(), Processor.Type.i686);
     }
+
+@Test
+    public final void testComputerWithProcessorOf2CoresAndi586()
+    {
+	Computer c = ComputerBuilder.scriptComputerWithProcessorOf2CoresAndi686();
+        Assert.assertEquals(c.getProcessor().getCores(), 2);
+	Assert.assertEquals(c.getProcessor().getType(), Processor.Type.i686);
+    }
     
 }

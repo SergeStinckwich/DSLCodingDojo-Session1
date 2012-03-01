@@ -21,6 +21,11 @@ public class ComputerBuilder
 	current = new Computer(new Processor(current.getProcessor().getCores(), Processor.Type.i686), null);
     }
 
+    static public void i586()
+    {
+	current = new Computer(new Processor(current.getProcessor().getCores(), Processor.Type.i586), null);
+    }
+
     static public Computer scriptComputerWithoutDevices() 
     {
 	computer();
