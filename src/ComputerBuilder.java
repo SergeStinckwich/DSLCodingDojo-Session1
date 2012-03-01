@@ -47,6 +47,14 @@ public class ComputerBuilder
 	     i686();
         return current;
     }
+   static public Computer scriptComputerWithProcessorOf2CoresAndi586()
+    {
+	computer();
+	   processor();
+	     cores(2);
+	     i586();
+        return current;
+    }
 }
 
 
