@@ -50,5 +50,13 @@ public final void testTruth() {
         Assert.assertEquals(c.getProcessor().getCores(), 2);
 	Assert.assertEquals(c.getProcessor().getType(), Processor.Type.i586);
     }
-    
+
+@Test
+    public final void testComputerWith1Disk()
+    {
+	Computer c = ComputerBuilder.scriptComputerWith1Disk();
+        Assert.assertEquals(c.getDisks().length, 1);
+
+    }
+
 }

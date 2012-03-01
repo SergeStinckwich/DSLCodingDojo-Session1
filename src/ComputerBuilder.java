@@ -26,6 +26,19 @@ public class ComputerBuilder
 	current = new Computer(new Processor(current.getProcessor().getCores(), Processor.Type.i586), null);
     }
 
+    static public void disk()
+    {
+	Processor p = current.getProcessor();
+	Computer c = new Computer(p, new Disk[1]);
+	current = c;
+    }
+
+    static public void size(int s)
+    {
+	current.getDisks()[0] = new Disk(s, 0, Disk.Interface.SATA);
+    }
+
+
     static public Computer scriptComputerWithoutDevices() 
     {
 	computer();
@@ -55,6 +68,17 @@ public class ComputerBuilder
 	     i586();
         return current;
     }
+    static public Computer scriptComputerWith1Disk()
+    {
+	computer();
+	   processor();
+	   cores(2);
+	   i586();
+	   disk();
+	   size(128);
+        return current;
+    }
+
 }
 
 
