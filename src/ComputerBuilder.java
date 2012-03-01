@@ -10,6 +10,17 @@ public class ComputerBuilder
     {
 	current = new Computer(new Processor(1, Processor.Type.i386), null);
     }
+
+    static public void cores(int nbr_cores)
+    {
+	current = new Computer(new Processor(nbr_cores, Processor.Type.i686), null);
+    }
+
+    static public void i686()
+    {
+	current = new Computer(new Processor(current.getProcessor().getCores(), Processor.Type.i686), null);
+    }
+
     static public Computer scriptComputerWithoutDevices() 
     {
 	computer();
@@ -20,6 +31,15 @@ public class ComputerBuilder
     {
 	computer();
 	   processor();
+        return current;
+    }
+
+    static public Computer scriptComputerWithProcessorOf2CoresAndi686()
+    {
+	computer();
+	   processor();
+	     cores(2);
+	     i686();
         return current;
     }
 }
