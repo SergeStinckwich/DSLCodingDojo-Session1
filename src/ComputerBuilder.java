@@ -1,16 +1,28 @@
 public class ComputerBuilder 
 {
+    public static Computer current;
 
-    static public Computer computer()
+    static public void computer()
     {
-	return new Computer(null, null);
+	current = new Computer(null, null);
+    }
+    static public void processor()
+    {
+	current = new Computer(new Processor(1, Processor.Type.i386), null);
     }
     static public Computer scriptComputerWithoutDevices() 
-	{
-	    return computer();
-	}
-
+    {
+	computer();
+	return current;
     }
+    
+    static public Computer scriptComputerWithProcessor()
+    {
+	computer();
+	   processor();
+        return current;
+    }
+}
 
 
 

@@ -27,7 +27,13 @@ public final void testTruth() {
        	Assert.assertEquals(c.getDisks(), null);
        	Assert.assertEquals(c.getProcessor(), null);
     }
-    //@Test
-//public final void testComputerWithSeulDisk()
+@Test
+    public final void testComputerWithProcessor()
+    {
+	Computer c = ComputerBuilder.scriptComputerWithProcessor();
+        Assert.assertEquals(c.getProcessor().getCores(), 1);
+	Assert.assertEquals(c.getProcessor().getType(), Processor.Type.i386);
+	
+    }
     
 }
